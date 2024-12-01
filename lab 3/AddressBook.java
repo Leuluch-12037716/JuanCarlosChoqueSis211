@@ -6,7 +6,6 @@ public class AddressBook {
     public AddressBook() {
         this.contacts = new HashMap<>();
     }
-
     public void addContact(Contact contact) {
         if (contacts.containsKey(contact.getEmail())) {
             System.out.println("A contact with this email already exists.");
@@ -15,7 +14,6 @@ public class AddressBook {
             System.out.println("Contact added successfully.");
         }
     }
-
     public void viewContacts() {
         if (contacts.isEmpty()) {
             System.out.println("The address book is empty.");
@@ -25,7 +23,6 @@ public class AddressBook {
             System.out.println(contact);
         }
     }
-
     public void searchContact(String email) {
         if (contacts.containsKey(email)) {
             System.out.println(contacts.get(email));
@@ -33,7 +30,6 @@ public class AddressBook {
             System.out.println("Contact not found.");
         }
     }
-
     public void deleteContact(String email) {
         if (contacts.containsKey(email)) {
             contacts.remove(email);
